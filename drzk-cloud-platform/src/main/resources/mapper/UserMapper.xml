@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.drzk.platform.mapper.UserMapper">
+      <resultMap id="BaseResultMap" type="com.drzk.platform.bean.User">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+    </resultMap>
+    <select id="getUsers" resultMap="BaseResultMap">
+        select * from tbl_User;
+    </select>
+    <select id="getUserById" parameterType="String" resultType="com.drzk.platform.bean.User">
+        select * from tbl_user where id = #{Id};
+    </select>
+</mapper>
