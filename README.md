@@ -15,7 +15,7 @@ spring-cloud 1.5.9版本
 127.0.0.1 peer3
 
 启动步骤：
-1、先启动注册中心，platform、platform-euraka-server2、platform-euraka-server3
+1、先启动注册中心，platform-euraka-server1、platform-euraka-server2、platform-euraka-server3
 
 访问：http://peer1:8088/  http://peer2:8078/  http://peer3:8098/ 可以分别看到注册中心注册的其他两个注册中心
 
