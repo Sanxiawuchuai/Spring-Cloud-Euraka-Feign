@@ -1,5 +1,5 @@
 # Spring-Cloud-Euraka-Feign
-spring boot 、EurakaServer、EurakaClient服务提供、Feign声明式消费服务使用案例
+spring boot 、EurakaServer集群、EurakaClient服务提供、Feign声明式消费服务使用案例
 spring-cloud 1.5.9版本
 
 准备工作：需要安装mysql
@@ -8,10 +8,16 @@ spring-cloud 1.5.9版本
 
 新建表tbl_user  表中两列id、name
 
-启动步骤：
-1、先启动注册中心
+配置本地hosts文件：
+加入这三个：
+127.0.0.1 peer1
+127.0.0.1 peer2
+127.0.0.1 peer3
 
-访问：http://localhost:8088/
+启动步骤：
+1、先启动注册中心，platform、platform-euraka-server2、platform-euraka-server3
+
+访问：http://peer1:8088/  http://peer2:8078/  http://peer3:8098/
 
 2、再启动服务提供者
 访问：localhost:8090/drzk/user/list
