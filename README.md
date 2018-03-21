@@ -6,7 +6,7 @@ spring-cloud 1.5.9版本
 
 新建数据库drzk
 
-新建表tbl_user  表中两列id、name
+新建表tbl_user  表中两列id、name 表中随便添加几行数据
 
 配置本地hosts文件：
 加入这三个：
